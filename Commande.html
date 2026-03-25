@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>VDomicile - Commander</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: green;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            margin: 10px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            margin-top: 15px;
+            width: 100%;
+            padding: 10px;
+            background: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: darkgreen;
+        }
+
+        footer {
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .message {
+            text-align: center;
+            color: green;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Commander</h1>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="produits.html">Produits</a>
+        <a href="commande.html">Commander</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section>
+    <div>
+        <h2>Passer une commande</h2>
+
+        <form onsubmit="return confirmerCommande()">
+            <input type="text" id="nom" placeholder="Votre nom" required>
+            <input type="text" id="produit" placeholder="Produit" required>
+            <button type="submit">Commander</button>
+        </form>
+
+        <div class="message" id="message"></div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 VDomicile</p>
+</footer>
+
+<script>
+function confirmerCommande() {
+    let nom = document.getElementById("nom").value;
+    let produit = document.getElementById("produit").value;
+
+    if(nom === "" || produit === "") {
+        alert("Veuillez remplir tous les champs !");
+        return false;
+    }
+
+    document.getElementById("message").innerText =
+        "Merci " + nom + " ! Votre commande de " + produit + " est enregistrée.";
+
+    return false; 
+}
+</script>
+
+</body>
+</html>

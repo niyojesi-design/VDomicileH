@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>VDomicile - Produits</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: green;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            margin: 10px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: white;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        li:hover {
+            background: lightgreen;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Nos Produits</h1>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="produits.html">Produits</a>
+        <a href="commande.html">Commander</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section>
+    <h2>Liste des produits</h2>
+    <ul>
+        <li onclick="choisirProduit('Habits')">Habit</li>
+        <li onclick="choisirProduit('SucreProduit alimentaire')">Produit alimentaire</li>
+        <li onclick="choisirProduit('Huile corporelle')">Huile corporelle</li>
+    </ul>
+</section>
+
+<footer>
+    <p>&copy; 2026 VDomicile</p>
+</footer>
+
+<script>
+function choisirProduit(produit) {
+    alert("Vous avez choisi : " + produit);
+}
+</script>
+
+</body>
+</html>

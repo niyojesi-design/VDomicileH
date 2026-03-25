@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>VDomicile - Accueil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: green;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            margin: 10px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="produits.html">Produits</a>
+        <a href="commande.html">Commander</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <h1>VDomicile</h1>
+    <h2>Votre livraison à domicile</h2>
+    <p>Produits alimentaires</p>
+    <img src="image1.png" alt="image_aliments">
+    <p>produits huile</p>
+    <img src="image2.png" alt="image_huile">
+    <p>produits vestimentales</p>
+    <img src="image3.png" alt="image_habits">
+    
+</header>
+
+<section>
+    <h2>Bienvenue sur VDomicile</h2>
+    <p>Nous livrons vos produits directement à domicile.</p>
+    <button onclick="welcome()">Clique ici</button>
+</section>
+
+<footer>
+    <p>&copy; 2026 VDomicile - Tous droits réservés</p>
+</footer>
+
+<script>
+function welcome() {
+    alert("Bienvenue sur VDomicile !");
+}
+</script>
+
+</body>
+</html>
